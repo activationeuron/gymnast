@@ -1,5 +1,5 @@
 <template>
-    <div>main compinet</div>
+    <h1>main compinet</h1>
 </template>
 
 <script>
