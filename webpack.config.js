@@ -1,12 +1,13 @@
 require('dotenv').config()
 
 const path = require('path')
+const webpack = require('webpack')
 const vueLoaderPlugin = require('vue-loader/lib/plugin')
 const MiniExtractCssPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
     mode: process.env.NODE_ENV || 'development',
-    entry: './client/index.js',
+    entry: ['webpack-hot-middleware/client?reload=true', './client/index.js'],
     output: {
         filename: 'app.js',
         path: path.resolve(__dirname, 'server/public')
@@ -27,7 +28,11 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [MiniExtractCssPlugin.loader, 'css-loader']
+                use: [
+                    MiniExtractCssPlugin.loader,
+                    'css-loader',
+                    'postcss-loader'
+                ]
             }
         ]
     },
@@ -35,6 +40,7 @@ module.exports = {
         new vueLoaderPlugin(),
         new MiniExtractCssPlugin({
             filename: 'app.css'
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ]
 }

@@ -1,5 +1,10 @@
 <template>
-    <h1>main compinet</h1>
+    <div>
+        <router-link to="/auth/login">Login</router-link>
+        <router-link to="/auth/register">register</router-link>
+
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>

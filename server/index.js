@@ -5,7 +5,7 @@ import config from '@config/index'
 import Webpack from 'webpack'
 import webpackCongig from '../webpack.config'
 import WebpackDevMiddleware from 'webpack-dev-middleware'
-
+import WebpackHotMiddleware from 'webpack-hot-middleware'
 import Path from 'path'
 
 Mongoose.connect(config.databaseUrl, {
@@ -16,8 +16,8 @@ Mongoose.connect(config.databaseUrl, {
 const app = Express()
 
 const compiler = Webpack(webpackCongig) //get config from the webpackcongig file
-app.use(WebpackDevMiddleware(compiler)) //use the config to serve client
-
+app.use(WebpackDevMiddleware(compiler, { hot: true })) //use the config to serve client
+app.use(WebpackHotMiddleware(compiler))
 import routes from '@routes/index'
 
 app.use(routes)
