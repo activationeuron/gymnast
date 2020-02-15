@@ -1,5 +1,5 @@
 <template>
-    <div>Components register</div>
+    <div>Componentasass asasasas register</div>
 </template>
 
 <script>

@@ -16,7 +16,12 @@ Mongoose.connect(config.databaseUrl, {
 const app = Express()
 
 const compiler = Webpack(webpackCongig) //get config from the webpackcongig file
-app.use(WebpackDevMiddleware(compiler, { hot: true })) //use the config to serve client
+app.use(
+    WebpackDevMiddleware(compiler, {
+        hot: true,
+        publicPath: webpackCongig.output.publicPath
+    })
+) //use the config to serve client
 app.use(WebpackHotMiddleware(compiler))
 import routes from '@routes/index'
 
