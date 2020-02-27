@@ -1,7 +1,7 @@
 <template>
     <div>
-        <router-link to="/auth/login">Login</router-link>
-        <router-link to="/auth/register">register</router-link>
+        <!-- <router-link to="/auth/login">Login</router-link>
+        <router-link to="/auth/register">register</router-link> -->
 
         <router-view></router-view>
     </div>

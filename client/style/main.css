@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind component;
+.btn-primary {
+    @apply bg-blue-500 px-2 py-1 rounded-sm text-white mx-2;
+}
+
+.btn-sec {
+    @apply bg-gray-500 px-2 py-1 rounded-sm text-white mx-2;
+}
+
 @tailwind utilities;

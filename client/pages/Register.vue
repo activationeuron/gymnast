@@ -1,9 +1,17 @@
 <template>
-    <div>Componentasass asasasas register</div>
+    <div>
+        <PlayerRegister />
+    </div>
 </template>
 
 <script>
-export default {}
+import PlayerRegister from '@components/players/PlayerRegister.vue'
+export default {
+    name: 'registartionPage',
+    components: {
+        PlayerRegister
+    }
+}
 </script>
 
 <style></style>

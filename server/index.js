@@ -7,6 +7,7 @@ import webpackCongig from '../webpack.config'
 import WebpackDevMiddleware from 'webpack-dev-middleware'
 import WebpackHotMiddleware from 'webpack-hot-middleware'
 import Path from 'path'
+import bodybarser from 'body-parser'
 
 Mongoose.connect(config.databaseUrl, {
     useUnifiedTopology: true,
@@ -24,7 +25,7 @@ app.use(
 ) //use the config to serve client
 app.use(WebpackHotMiddleware(compiler))
 import routes from '@routes/index'
-
+app.use(bodybarser.json())
 app.use(routes)
 
 app.get('*', (req, res) => {

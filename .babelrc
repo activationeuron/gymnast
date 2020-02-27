@@ -6,13 +6,16 @@
             {
                 "root": ["./"],
                 "alias": {
+                    "@": "./",
                     "@controllers": "./server/controllers",
                     "@config": "./server/config",
                     "@routes": "./server/routes",
-                    "@": "./",
-                    "@pages": "./client/pages"
+                    "@pages": "./client/pages",
+                    "@store": "./client/store",
+                    "@components": "./client/components/"
                 }
             }
-        ]
+        ],
+        ["@babel/transform-runtime"]
     ]
 }

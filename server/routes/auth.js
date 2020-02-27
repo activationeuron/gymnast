@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import authController from '@controllers/auth.js'
+import authController from '@controllers/v1/auth.js'
 console.log(authController, 'auth controllers')
 const authRoutes = new Router()
 
