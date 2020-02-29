@@ -6,6 +6,8 @@ module.exports = {
             display: ['Roboto', 'sans-serif']
         }
     },
-    variants: {},
+    variants: {
+        backgroundColor: ['responsive', 'hover', 'focus', 'active']
+    },
     plugins: []
 }
