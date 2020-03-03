@@ -24,6 +24,9 @@ import AdminClubPanel from '@components/admin/AdminClubPanel.vue'
 
 // @ts-ignore
 import AdminPlayerPanel from '@components/admin/AdminPlayerPanel.vue'
+// @ts-ignore
+
+import viewssheet from '@components/admin/viewssheet.vue'
 export default new Router({
     mode: 'history',
     routes: [
@@ -59,6 +62,11 @@ export default new Router({
                     path: 'manageplayers',
                     name: 'manageplayers',
                     component: AdminPlayerPanel
+                },
+                {
+                    path: '/admin/views',
+                    name: 'viewssheets',
+                    component: viewssheet
                 }
             ]
         }

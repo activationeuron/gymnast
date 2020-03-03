@@ -15,8 +15,8 @@
                 <p class="text-xs font-medium text-gray-500">Admin</p>
             </div>
         </div>
-        <div class="bg-gray-400 px-1 rounded-sm">
-            <svg class="h-6 w-6 text-" xmlns="http://www.w3.org/2000/svg">
+        <div class="bg-blue-600 px-1 rounded-sm">
+            <svg class="h-6 w-6 text-white " xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
                     fill="currentColor"

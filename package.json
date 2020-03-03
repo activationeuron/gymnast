@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "nodemon --exec babel-node server/index",
         "prettier": "prettier --write './**/*.js'",
-        "build:client": "webpack --mode=production",
+        "build:client": "NODE_ENV=production webpack --mode=production",
         "build:server": "babel server/ --out-dir dist/ --copy-files",
         "build": "pnpm run build:client && pnpm run build:server"
     },
