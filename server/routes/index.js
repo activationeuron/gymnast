@@ -1,10 +1,10 @@
 import { Router } from 'express'
 import authRouter from './auth'
-import markingSheet from './markingSheet'
-import events from './events'
+import sheetsRoutes from './sheetsRoutes'
+import eventsRoutes from './eventsRoutes'
 const router = new Router()
 
 router.use('/api/v1', authRouter)
-router.use('/api/v1', markingSheet)
-router.use('/api/v1/', events)
+router.use('/api/v1', sheetsRoutes)
+router.use('/api/v1/', eventsRoutes)
 export default router
