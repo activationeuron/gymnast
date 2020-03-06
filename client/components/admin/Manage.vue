@@ -39,10 +39,10 @@
                 </div>
             </div>
         </div>
-        <div v-show="openCreatepage">
+        <div v-show="!openCreatepage">
             <PageMain />
         </div>
-        <div v-show="!openCreatepage">
+        <div v-show="openCreatepage">
             <CreateEventDilog />
         </div>
     </div>

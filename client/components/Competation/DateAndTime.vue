@@ -95,6 +95,7 @@
                                 >Kida Mandle,Mumbai-4</span
                             >
                         </div>
+                        {{ getAllEvents(true) }}
                     </div>
                 </div>
             </div>
@@ -103,7 +104,18 @@
 </template>
 
 <script>
-export default {}
+import { mapActions } from 'vuex'
+export default {
+    name: 'dateAndTime',
+    data: () => {
+        return {}
+    },
+    methods: {
+        ...mapActions(['getAllEvents'])
+    },
+    computed: {},
+    mounted: {}
+}
 </script>
 
 <style></style>
